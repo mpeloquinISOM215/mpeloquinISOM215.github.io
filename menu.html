@@ -7,7 +7,7 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #808000;
+  background-color: blue;
 }
 
 li {
@@ -23,7 +23,7 @@ li a, .dropbtn {
 }
 
 li a:hover, .dropdown:hover .dropbtn {
-  background-color: blue;
+  background-color:tan;
 }
 
 li.dropdown {
@@ -57,25 +57,31 @@ li.dropdown {
 <body>
 
 <ul>
-  <li><a href="index.html">Home</a></li>
-   <li class="dropdown">
-    <a href="javascript:void(0)" class="dropbtn"><a href="Menu.html">Menu</a>
+  <li><a href="home.html">Home</a></li>
+    <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Menu</a>
     <div class="dropdown-content">
       <a href="smoothies.html">Smoothies</a>
-      <a href="coffee.html">Coffee </a>
-    <li><a href="about.html">About us</a></li>
-    <li><a href="contact.html">Contact us</a></li>
-    
-    
+      <a href="coffee.html">Coffee</a>
+      
+       <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn">About us</a>
+    <div class="dropdown-content">
+      <a href="mission.html">Our mission</a>
+      <a href="code.html">QR code</a>
+      
+      <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Contact us</a>
+    <div class="dropdown-content">
+      <a href="locations.html">Locations</a>
+      <a href="message.html">Send us a message</a>
+      
     </div>
-    
-    
-   
   </li>
 </ul>
 
-<h3>Dropdown Menu inside a Navigation Bar</h3>
-<p>Hover over the "Dropdown" link to see the dropdown menu.</p>
+<h3>Welcome to our menu</h3>
+<p>A variety of delicious choices.</p>
 
 </body>
 </html>
