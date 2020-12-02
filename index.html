@@ -36,19 +36,16 @@
  <body> 
  <div class="header">
 
-</div>
-<hr>
-<!-- Menu Navigation -->
-<div class="topnav">
+<script>
+//import dynamic menu
+$.get("headnav2.html", function(data){
+    $("#nav-placeholder").prepend(data);
+});
+</script>
+  </head>
 
-    <a href="index.html">Home</a>
-    <a href="menu.html">Menu</a>
-    <a href="contact.html">Contact Us</a>
-    <a href="about.html">About Us</a>
-    
- 
-</div>
-  
+<body>
+<form>
    
 <img id="Image1" src="smoothie_coffee.jpg" style="border-width:0px;" /> 
 <h3>Something tasty is Coming soon!</h3>
