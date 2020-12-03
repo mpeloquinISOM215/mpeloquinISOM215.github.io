@@ -1,44 +1,35 @@
-<!doctype html> 
-<html lang="en"> 
- <head>
-  <title>The Smoothie Bean</title>
- <meta charset="utf-8"> 
- <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-   /* Style the body */
-   body {
-    font-family:cambria;
-    margin: 0;
-   }
-   /* Header/Logo Title */
-.header {
-  padding: 10px;
-  text-align: center;
-  background: #f5bf98;
-  color: white;
-  font-size: 15px;
- }
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<title>The Smoothie Bean </title>
 
-/* Page Content */
-.content {padding:20px;}
-</style>
-</head>
-<body>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
-<div class="header">
-  <h1>THE SMOOTHIE BEAN</h1>
-  <h2>Delicious smoothies & smooth coffee</h2>
-</div>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="theme-color" content="#ffffff">
+<style>
+hr {
+  margin-top: 0em;
+  margin-bottom: 0em;
+  border: 2px solid black;
+  border-radius: 5px
+}
 
-
- <title>The smoothie bean</title>
- </head> 
- <body> 
- <div class="header">
+p::first-letter {
+  color: #000000;
+  font-size: x-large;
+}
 </style>
 <script>
 //import dynamic menu
-$.get("headnav.html", function(data){
+$.get("headnav2.html", function(data){
     $("#nav-placeholder").prepend(data);
 });
 </script>
@@ -49,15 +40,16 @@ $.get("headnav.html", function(data){
 <form>
 
 <div id="nav-placeholder">
-   
+<center>
 <img id="Image1" src="smoothie_coffee.jpg" style="border-width:0px;" /> 
 <h3>Something tasty is Coming soon!</h3>
 </center>
 </form>
-</body>
-</html> 
-Copyright &copy; 2020 MATTHEW PELOQUIN
-</footer>
-</div>
+<hr>
+ <footer>
+  Author: Suffolk Student XYZ.  Go back to <a href="https://ptreadwayisom215.github.io">home page</a>
+</footer> 
+<hr>
 </body>
 </html>
+	
