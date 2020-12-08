@@ -49,21 +49,116 @@ $.get("headnav2.html", function(data){
 });
 </script>
 
+<head>
+
+<!-- Include SMTPJS 3rd Party Code -->
+<title>Send us a message!</title>
+<script src="https://smtpjs.com/v3/smtp.js"></script>  
+
+<!-- META TAGE -->
+<meta charset="utf-8">
+<meta name="author" content="Your Name">
+<meta name="description" content="Feedback">
+<meta name="keywords" content="Feedback Rating">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                     Cascading Style Sheets (CSS) Styles
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+-->
+<style>
+label{
+ margin-left: 10px;
+ font-size:22px;
+}
+h2 {
+  text-align: center;  
+}
+
+</style>
+
+<script type="text/javascript">
+//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                            ValidateEmail()
+//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+function ValidateEmail() 
+{
+var email_to_send_to = document.getElementById("email_address").value;
+//console.log("in ValidateEmail...");
+
+ if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email_to_send_to))
+  {
+    return (true)
+  }
+    alert("Invalid email address entered.")
+    return (false)
+}
+//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                            sendEmail()
+//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+function sendEmail() {
+		
+var email_to_send_to = document.getElementById("email_address").value;
+
+// Check email address entered and make sure valid	
+if (ValidateEmail())
+  {
+    //console.log("in sendEmail...");
+  /* Unencrypted method */
+    Email.send({
+    Host: "smtp.gmail.com",
+  	Username : "ptreadwayISOM215@gmail.com",
+	Password : "Greendream8",
+    To : email_to_send_to,  
+    From : "DoNotReply@gmail.com",
+	Bcc : "mpeloquin@su.suffolk.edu",
+    Subject : "Your Feedback Has Been Received",
+    Body : "<h2 style=color:#228B22>We received your feedback!</h2><hr>"+
+	"Name: "+
+	document.getElementById("submitter_name").value+
+	"<br>Contact Notes: "+document.getElementById("mytextarea").value+"<br>"+
+	"<hr>"
+   })
+  .then(function(message){alert("Email successfully sent.")});
+  }}
+	
+	
+/* Encrypted Method 
+    Email.send({
+	SecureToken : "351b0ae4-5cbd-4406-b422-f54934a4567d",
+    To : email_to_send_to,     
+    From : "DoNotReply@gmail.com",
+    Bcc : "mpeloquin@su.suffolk.edu",
+    Subject : "Feedback Received",
+    Body : "<h2 style=color:#228B22>We received your feedback!</h2><hr>"+
+	"Name: "+
+	document.getElementById("submitter_name").value+
+	"<br>Contact Notes: "+document.getElementById("mytextarea").value+"<br>"+
+	"<hr>"
+   })
+  .then(function(message){alert("Email successfully sent.")});
+  }}
+  */
+</script>
+
 </head>
-
-<body>
-<form>
-
-<div id="nav-placeholder">
-<center>
-<img id="Image1" src="smoothie_coffee.jpg" style="border-width:0px;" /> 
-<h3>Something tasty is Coming soon!</h3>
-</center>
-</form>
-<hr>
- <footer>
-  Created by Matthew Peloquin  Go back to <a href="https://mpeloquinisom215.github.io">Home</a>
-</footer> 
-<hr>
-</body>
+<body style="background-color: orange">
+<h2>Send us your feedback.</h2>
+  <form method="post">
+  <label>Name:</label><br>
+  <input id="submitter_name" type="text" size="45"><br>
+   <br> <label>Email Address: </label><br>
+  <input id="email_address" type="email" required size="45"><br>
+    <br>  <label>Contact Notes: </label><br>
+  <textarea id="mytextarea"  name="notes" rows = "3" cols ="100" maxlength="300">
+Questions or comments? We'd love to hear from you!
+</textarea>
+<br>  
+  <p><input style="margin-left: 114px" type="button" src="email3.png" value="Send Email" onclick="sendEmail('foo')"/></p>
+<br /> 
+ </form>
+	<footer>
+  Created by Matthew Peloquin  Go back to <a href="https://mpeloquinisom215.github.io">Home</a> 
 </html>
