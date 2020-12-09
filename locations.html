@@ -49,12 +49,14 @@ $.get("headnav2.html", function(data){
 });
 </script>
 
-</style>
 </head>
 <body>
 <form>
+	
+<div id="nav-placeholder">
+<center>
 
-<nav class="w3-sidebar w3-bar-block w3-light-grey" style="width:180px">
+
 
 <!-- Boston Campus -->
 <a href="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=8%20Ashburton%20Place%2C%20Boston%2C%20MA+(Suffolk%20University)&amp;ie=UTF8&amp;t=&amp;z=12&amp;iwloc=B&amp;output=embed" target="myframe" onclick=BostonContent()>Boston</a>
@@ -76,16 +78,6 @@ $.get("headnav2.html", function(data){
 <!-- zoom levels are 0 to 18-->
 
 
-<!-- Map  -->
-    <script>
-      var map;
-      function Map3rdCampus() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: -34.397, lng: 150.644},
-          zoom: 4	
-        });
-      }
-    </script>
 
 <!-- map Madrid -->
 <script>
