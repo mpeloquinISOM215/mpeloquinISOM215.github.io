@@ -48,19 +48,100 @@ $.get("headnav2.html", function(data){
     $("#nav-placeholder").prepend(data);
 });
 </script>
+<style>
+div.gallery {
+  border: 1px solid #ffba7d;
+}
 
+
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 10px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 20%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 40%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
 </head>
 
-<body>
-<form>
+<h1>Our Coffee Menu</h1>
+<h4>Our top coffee for December:</h4>
 
-<div id="nav-placeholder">
-<center>
-<img id="Image1" src="coming_soon.jpg" width="400" height="400"> 
-<h3>We are building our menu!</h3>
-</center>
-</form>
-<hr>
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="regular.jpg">
+      <img src="regular.jpg"  width="500" height="400">
+    </a>
+    <div class="desc">regular fresh brewed with milk and cream</div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="mocha.jpg">
+      <img src="mocha.jpg" width="500" height="400">
+    </a>
+    <div class="desc">Our delicious mocha flavored coffee</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="coldbrew.jpg">
+      <img src="coldbrew.jpg"  width="500" height="400">
+    </a>
+    <div class="desc">Our fresh cold brew coffee </div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="peppermint.jpg">
+      <img src="peppermint.jpg"  width="500" height="400">
+    </a>
+    <div class="desc">Just in for the holidays- Our peppermint flavored coffee</div>
+  </div>
+</div>
+
+<div class="clearfix"></div>
+
+<div style="padding:8px;">
+  <h4>Customize your coffee to make it perfect for you!</h4>
+  <p> </p>
+</div>
  <footer>
   Created by Matthew Peloquin  Go back to <a href="https://mpeloquinisom215.github.io">Home</a>
 </footer> 
