@@ -56,11 +56,99 @@ $.get("headnav2.html", function(data){
 
 <div id="nav-placeholder">
 <center>
-<img id="Image1" src="coming_soon.jpg" width="400" height="400"> 
-<h3>Fruits are some of the best sources of antioxidants</h3>
-</center>
-</form>
-<hr>
+div.gallery {
+  border: 1px solid #ffba7d;
+}
+
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 20%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 45%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+</head>
+<body>
+
+<h2>Fruits are high in antioxidants and other beneficial ingredients.</h2>
+<h4>Check out some of the healthiest fruits below!</h4>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="blueberriesfacts.jpg">
+      <img src="blueberriesfacts.jpg" width="500" height="400">
+    </a>
+    <div class="desc">Blueberries are high in </div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="kiwifacts.jpg">
+      <img src="kiwifacts.jpg" width="500" height="400">
+    </a>
+    <div class="desc">Kiwi is known to be one of the healthiest fruits on the planet. It has more vitamin C than and orange</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="mangofacts.jpg">
+      <img src="mangofacts.jpg"  width="500" height="400">
+    </a>
+    <div class="desc">Mangos are high in </div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="strawberryfacts.jpg">
+      <img src="strawberryfacts.jpg"  width="500" height="400">
+    </a>
+    <div class="desc">Strawberries are high in </div>
+  </div>
+</div>
+
+<div class="clearfix"></div>
+
+<div style="padding:6px;">
+  <h3>To learn more about these fruits and their ingredients please visit these links</h3>
+  <p>.</p>
+</div>
  <footer>
   Created by Matthew Peloquin  Go back to <a href="https://mpeloquinisom215.github.io">Home</a>
 </footer> 
